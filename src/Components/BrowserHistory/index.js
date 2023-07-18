@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import History from '../HistoryItem'
+import HistoryItem from '../HistoryItem'
 import './index.css'
 
 
@@ -113,6 +113,8 @@ render(){
   return (
     <>
 <div className="header-container">
+<div className="app-container">
+
 <img 
    src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png" 
    alt="app logo"
@@ -133,7 +135,6 @@ render(){
 </div>
 </div>
 
-<div className="app-container">
 <ul className="history-container">
 {searchResults.length === 0 ? (
   <p className="error">There is no history to show </p>
