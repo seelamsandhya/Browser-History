@@ -12,7 +12,7 @@ const HistoryItem = props => {
         <div className="row-container">
         <div className="row">
         <p className="title">{timeAccessed}</p>
-        <img src={logoUrl} alt="domain-logo" className="image" />
+        <img src={logoUrl} alt="domain logo" className="image" />
         <p className="title">{title}</p>
         <p className="domain">{domainUrl}</p>
         </div>
