@@ -81,31 +81,32 @@ const initialHistoryList = [
 class History extends Component{
     state={
         searchInput: '',
-        isShow: false,
+        
         HistoryList: initialHistoryList,
     }
+  
 updateSearch = value => {
     this.setState({
         searchInput: value,
     })
 }
+  
 onChangeSearchInput = event => {
     this.setState({
         searchInput:event.target.value,
     })
 }
+  
 deleteHistory = id => {
     const {HistoryList} = this.state
     const filterUserData = HistoryList.filter(each => each.id !== id)
     this.setState({
         HistoryList: filterUserData,
     })
-    if (HistoryList.length === 1){
-        this.setState({isShow: true})
-    }
+    
 }
 render(){
-  const {searchInput, HistoryList, isShow} = this.state
+  const {searchInput, HistoryList} = this.state
   const searchResults = HistoryList.filter(each =>
   each.title.toLowerCase().includes(searchInput.toLowerCase()),
   )
